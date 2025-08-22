@@ -41,7 +41,7 @@ def create_directories(dirs: list, verbose=True):
             logger.error(f"Error creating directory {dir}: {e}")
 
 
-@ensure_annotations
+
 def save_json(data: Any, path: Path) -> None:
     try:
         with open(path, 'w') as file:
@@ -59,7 +59,7 @@ def load_json(path: Path) -> Any:
     except Exception as e:
         logger.error(f"Error loading JSON from {path}: {e}")
         raise e
-    
+
 @ensure_annotations
 def save_bin(data: Any, path: Path) -> None:
     try:
