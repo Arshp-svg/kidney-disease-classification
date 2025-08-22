@@ -21,4 +21,16 @@ class PrepareBaseModelConfig:
     weights: str
     epochs: int
     learning_rate: float
-    
+
+
+
+@dataclass
+class TrainingConfig:
+   root_dir: Path
+   model_checkpoint: Path
+   updated_base_model_path:Path
+   training_data:Path
+   params_epoch:int
+   params_batch_size:int
+   params_image_size:list
+   params_augmentation:bool
