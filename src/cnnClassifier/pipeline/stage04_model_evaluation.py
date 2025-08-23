@@ -9,12 +9,12 @@ class ModelEvaluationPipeline:
      pass
 
 
-    def main():
+    def main(self):
         config = ConfigManager()
         eval_config = config.get_model_evaluation_config()
         model_evaluation = ModelEvaluation(eval_config)
         model_evaluation.evaluation()
-        model_evaluation.log_into_mlflow()
+        # model_evaluation.log_into_mlflow()
 
 
 if __name__ == "__main__":
